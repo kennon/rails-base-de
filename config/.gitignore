@@ -1,0 +1,3 @@
+*.yml
+*.conf
+!locales/*.yml
