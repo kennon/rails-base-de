@@ -11,7 +11,7 @@ namespace :app do
     %x{sed -i -e "s/:session_key => '.*'/:session_key => '_#{PROJECT}_session'/" config/environment.rb}
     %x{sed -i -e "s/PROJECT/#{PROJECT}/" config/initializers/exception_notifier_config.rb}
     %x{sed -i -e "s/PROJECT/#{PROJECT}/" app/views/welcome/index.html.erb}
-    %x{sed -i -e "s/PROJECT/#{PROJECT}/" app/views/layout/application.html.erb}
+    %x{sed -i -e "s/PROJECT/#{PROJECT}/" app/views/layouts/application.html.erb}
   end
  
   desc 'Reset secret keys used to encrypt session data and protect from CSRF.'
