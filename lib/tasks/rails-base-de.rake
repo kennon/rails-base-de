@@ -1,3 +1,4 @@
+# This was copied from http://github.com/booch/rails-base, with a few modifications
 require 'rake'
  
 namespace :app do
