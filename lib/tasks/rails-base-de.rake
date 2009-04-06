@@ -9,9 +9,9 @@ namespace :app do
       %x{sed -i "" "s/^  database: .*_#{env}$/  database: #{PROJECT}_#{env}/" config/database.yml.example}
     end
     %x{sed -i ""  "s/:session_key => '.*'/:session_key => '_#{PROJECT}_session'/" config/environment.rb}
-    %x{sed -i "" "s/PROJECT/#{PROJECT}/" config/initializers/exception_notifier_config.rb}
-    %x{sed -i ""  "s/PROJECT/#{PROJECT}/" app/views/welcome/index.html.erb}
-    %x{sed -i "" "s/PROJECT/#{PROJECT}/" app/views/layouts/application.html.erb}
+    %x{sed -i "" "s/PROJEKT/#{PROJECT}/" config/initializers/exception_notifier_config.rb}
+    %x{sed -i ""  "s/PROJEKT/#{PROJECT}/" app/views/welcome/index.html.erb}
+    %x{sed -i "" "s/PROJEKT/#{PROJECT}/" app/views/layouts/application.html.erb}
   end
  
   desc 'Reset secret keys used to encrypt session data and protect from CSRF.'
